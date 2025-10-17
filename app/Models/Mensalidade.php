@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Mensalidade extends Model
 {
     protected $fillable = [
-        'id',
         'valor',
         'mesReferencia',
         'dataRecebimento',
