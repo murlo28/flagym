@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('exercicio', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('Grupo_Muscular');
+            $table->string('gif');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

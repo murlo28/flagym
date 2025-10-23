@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('telefone');
             $table->string('email')->unique();
             $table->string('endereco'); 
-            $table->string('status')->default('ativo');
+            $table->boolean('status')->default(true);
             $table->date('data_cadastro')->default(now());
             $table->string('restricao_fisica')->nullable();
             $table->string('login')->unique();

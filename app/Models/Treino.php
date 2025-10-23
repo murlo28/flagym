@@ -10,7 +10,7 @@ class Treino extends Model
         'frequencia',
         'data',
         'status',
-        'Funcionario_id',
-        'Cliente_id'
+        'funcionario_id',
+        'cliente_id'
     ];
 }

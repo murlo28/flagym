@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('mensalidade', function (Blueprint $table) {
             $table->id();
+            $table->decimal('valor', 8, 2);
+            $table->int('mesreferencia');
+            $table->date('datarecebimento');
+            $table->string('metodoRecebimento');
+            $table->boolean('status')->default(true); 
+            $table->foreignId('Matricula_id')->constrained('matricula')->onDelete('cascade');
             $table->timestamps();
         });
     }

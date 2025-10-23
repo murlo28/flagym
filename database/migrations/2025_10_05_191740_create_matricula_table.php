@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('matricula', function (Blueprint $table) {
             $table->id();
-            
+            $table->date('data_matricula');
+            $table->integer('diavencimento');
+            $table->decimal('valormensalidade', 8, 2);
+            $table->boolean('status')->default(true);
+            $table->foreignId('Cliente_id')->constrained('clientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

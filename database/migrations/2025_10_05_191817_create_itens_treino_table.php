@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('itens_treino', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('Treino_id')->constrained('treino')->onDelete('cascade');
+            $table->foreignId('Exercicio_id')->constrained('Exercicio')->onDelete('cascade');
+            $table->int('series');
+            $table->int('repeticoes');
             $table->timestamps();
         });
     }
